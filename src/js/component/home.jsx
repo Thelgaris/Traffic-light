@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Home = () => {
 	const [select, setSelect] = useState("yellow");
@@ -32,8 +32,7 @@ const Home = () => {
 			{select == "red" ? <h1>{select}</h1> : <h1>x</h1>}
 			{select == "yellow" ? <h1>{select}</h1> : <h1>x</h1>}
 			{select == "green" ? <h1>{select}</h1> : <h1>x</h1>}
-		
-	
+			useEffect((){setInterval({ setSelect }, 1000, { setSelect })})
 		</div>
 	);
 };
